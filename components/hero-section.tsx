@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef } from "react"
+import { useEffect, useState, useRef } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Search, Megaphone, TrendingUp, Code, Briefcase } from "lucide-react"
@@ -8,10 +8,27 @@ import { motion, useScroll, useTransform, useInView } from "framer-motion"
 import { PolygonalBackground } from "@/components/polygonal-background"
 
 export function HeroSection() {
+  const [jobCount, setJobCount] = useState<number | null>(null);
+
+  useEffect(() => {
+    async function fetchJobCount() {
+      try {
+        const res = await fetch("/api/jobs?limit=1");
+        const data = await res.json();
+        if (data && data.pagination && typeof data.pagination.total === "number") {
+          setJobCount(data.pagination.total);
+        }
+      } catch (e) {
+        setJobCount(null);
+      }
+    }
+    fetchJobCount();
+  }, []);
+
   const { scrollY } = useScroll()
   const y = useTransform(scrollY, [0, 500], [0, 150])
   const opacity = useTransform(scrollY, [0, 300], [1, 0])
-  const ref = useRef(null)
+  const ref = useRef(null);
   const isInView = useInView(ref, { once: true })
 
   return (
@@ -109,12 +126,12 @@ export function HeroSection() {
               className="flex flex-wrap justify-center lg:justify-start gap-8 mt-12 pt-8 border-t border-dark-accent/30"
             >
               <div className="text-center">
-                <div className="text-2xl font-bold text-white">500+</div>
-                <div className="text-sm text-gray-400">Aktivni poslovi</div>
+                <div className="text-2xl font-bold text-white">{jobCount !== null ? `${jobCount}+` : "..."}</div>
+                <div className="text-sm text-gray-400">Aktivnih poslova</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-white">100+</div>
-                <div className="text-sm text-gray-400">Kompanije</div>
+                <div className="text-sm text-gray-400">Kompanija</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-white">95%</div>

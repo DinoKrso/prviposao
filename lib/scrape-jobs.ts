@@ -267,9 +267,6 @@ export async function scrapeDzobs() {
           timeout: 10000
         });
 
-        // DEBUG: Save the HTML to a file for inspection
-        fs.writeFileSync(`debug-job-${i + 1}.html`, jobResponse.data);
-
         const $jobPage = cheerio.load(jobResponse.data);
 
         // --- NEW SELECTORS BASED ON ACTUAL JOB PAGE STRUCTURE ---

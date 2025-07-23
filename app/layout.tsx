@@ -46,7 +46,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <link rel="icon" href="/briefcase-favicon.svg" type="image/svg+xml" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/logosite.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/logosite.png" />
+        <link rel="shortcut icon" href="/logosite.png" />
       </Head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
