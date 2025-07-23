@@ -132,7 +132,7 @@ export function Navigation() {
                     >
                       <Link href="/employer/login">Prijava Poslodavca</Link>
                     </Button>
-                    <Button asChild className="bg-brand-orange hover:bg-brand-yellow text-white smooth-hover border-0">
+                    <Button asChild variant="orange" className="border-0">
                       <Link href="/employer/register">Objavite Poslove</Link>
                     </Button>
                   </div>
@@ -245,7 +245,8 @@ export function Navigation() {
                             </Button>
                             <Button
                               asChild
-                              className="bg-brand-orange hover:bg-brand-yellow text-white smooth-hover border-0"
+                              variant="orange"
+                              className="border-0"
                             >
                               <Link href="/employer/register" onClick={() => setIsOpen(false)}>
                                 Objavite Poslove

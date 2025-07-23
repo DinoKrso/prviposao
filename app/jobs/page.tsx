@@ -180,7 +180,7 @@ export default function JobsPage() {
             <p className="text-lg md:text-xl text-gray-300 mb-2">
               {isLoading ? "Učitavanje..." : `${jobs.length} dostupnih pozicija`}
             </p>
-            <Badge className="text-sm bg-brand-orange text-white hover:bg-brand-yellow">
+            <Badge className="text-sm bg-brand-orange text-white hover-blue">
               Samo Junior i Praktikantske Pozicije
             </Badge>
           </motion.div>
@@ -665,7 +665,8 @@ function JobDetailsContent({ job }: { job: Job }) {
 
         {/* Apply Button */}
         <Button
-          className="w-full bg-brand-orange hover:bg-brand-yellow text-white transition-colors duration-200 border-0"
+          variant="orange"
+          className="w-full transition-colors duration-200 border-0"
           size="lg"
           onClick={() => window.open(job.applicationUrl, "_blank")}
         >

@@ -73,6 +73,11 @@
   .fade-in {
     animation: fadeIn 0.5s ease-out;
   }
+
+  .hover-blue:hover {
+    background-color: #2563eb !important; /* Tailwind blue-600 */
+    color: #fff !important;
+  }
 }
 
 /* Smooth scrolling */

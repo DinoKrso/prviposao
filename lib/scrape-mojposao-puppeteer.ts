@@ -96,7 +96,7 @@ export async function scrapeMojPosaoPuppeteer(): Promise<PuppeteerScrapedJob[]> 
             }
           }
           // Salary
-          let salary = 'Dogovorljivo';
+          let salary = 'Fleksibilno';
           // Application URL: look for the apply button
           let applicationUrl = window.location.href;
           const applyBtn = document.querySelector('a.EV5KEN-Xc-a') as HTMLAnchorElement | null;

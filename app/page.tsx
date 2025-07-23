@@ -227,7 +227,7 @@ export default function HomePage() {
             <p className="text-lg md:text-xl text-gray-300 mb-2">
               {isLoading ? "Učitavanje..." : `${totalJobs} dostupnih pozicija`}
             </p>
-            <Badge className="text-sm bg-brand-orange text-white hover:bg-brand-yellow">
+            <Badge className="text-sm bg-brand-orange text-white hover-blue">
               Samo Junior i Praktikantske Pozicije
             </Badge>
           </motion.div>
@@ -369,8 +369,9 @@ export default function HomePage() {
             className="text-center mt-8"
           >
             <Button
+              variant="orange"
               size="lg"
-              className="text-lg px-8 py-4 bg-brand-orange hover:bg-brand-yellow text-white smooth-hover border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="text-lg px-8 py-4 smooth-hover border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               asChild
             >
               <Link href="/jobs" className="flex items-center gap-2">

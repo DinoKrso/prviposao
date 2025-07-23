@@ -303,7 +303,7 @@ export async function scrapeDzobs() {
         // (handled above)
 
         // Salary, description, and other fields remain as before
-        const salary = $jobPage(".salary, .plata, .compensation, [class*='salary']").first().text().trim() || "Dogovorljivo";
+        const salary = $jobPage(".salary, .plata, .compensation, [class*='salary']").first().text().trim() || "Fleksibilno";
 
         // New robust section extraction: get all <span data-text="true"> in each <section> by heading, join with spaces
         function extractSectionTextByHeading($container: Cheerio<any>, heading: string): string {

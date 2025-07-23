@@ -42,7 +42,7 @@ export function Footer() {
         <div className="border-t border-dark-accent mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm text-center md:text-left">
-              © 2024 PrviPosao.ba. Sva prava zadržana.
+              © 2025 PrviPosao. Sva prava zadržana.
             </div>
             <div className="flex flex-wrap justify-center md:justify-end space-x-6 text-sm">
               <Link href="/privacy" className="text-gray-400 hover:text-brand-orange transition-colors">

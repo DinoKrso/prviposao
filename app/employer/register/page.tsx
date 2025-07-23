@@ -278,7 +278,8 @@ export default function EmployerRegisterPage() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-brand-orange hover:bg-brand-yellow text-white smooth-hover border-0 flex items-center justify-center"
+                  variant="orange"
+                  className="w-full smooth-hover border-0 flex items-center justify-center"
                   size="lg"
                 >
                   Kreiraj Račun
