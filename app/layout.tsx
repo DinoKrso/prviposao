@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Navigation } from "@/components/navigation"
 import { PageLoader } from "@/components/page-loader"
 import { AuthProvider } from "@/contexts/auth-context"
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -43,31 +44,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="bs" suppressHydrationWarning>
-      <head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "PrviPosao",
-          "url": "https://prviposao.ba/",
-          "logo": "/placeholder-logo.png",
-          "sameAs": [
-            "https://www.facebook.com/prviposao.ba",
-            "https://www.linkedin.com/company/prviposao"
-          ]
-        }) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "url": "https://prviposao.ba/",
-          "name": "PrviPosao",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://prviposao.ba/poslovi?search={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        }) }} />
-      </head>
+    <html lang="en">
+      <Head>
+        <link rel="icon" href="/briefcase-favicon.svg" type="image/svg+xml" />
+      </Head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <AuthProvider>

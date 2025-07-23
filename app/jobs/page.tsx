@@ -474,6 +474,18 @@ function JobCard({
   job: Job
   showFullDetails?: boolean
 }) {
+  function isPlaceholderLogo(url: string | undefined) {
+    if (!url) return true;
+    // Add known placeholder patterns here
+    return (
+      url.includes('placeholder') ||
+      url.endsWith('/default-logo.png') ||
+      url.endsWith('/no-logo.png') ||
+      url.includes('no-logo') ||
+      url.includes('generic-logo')
+    );
+  }
+
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
     const now = new Date()
@@ -504,7 +516,11 @@ function JobCard({
   return (
     <div className="flex items-start gap-3">
       <img
-        src={job.companyLogo || "/placeholder.svg?height=48&width=48&text=" + job.company.substring(0, 2).toUpperCase()}
+        src={
+          isPlaceholderLogo(job.companyLogo)
+            ? "/placeholder.svg?height=48&width=48&text=" + job.company.substring(0, 2).toUpperCase()
+            : job.companyLogo
+        }
         alt={`Logo kompanije ${job.company} - junior pozicija, prvi posao, praksa`}
         className="w-12 h-12 rounded-lg bg-dark-accent flex-shrink-0"
       />

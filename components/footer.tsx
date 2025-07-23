@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-dark-primary border-t border-dark-accent">
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -34,84 +34,8 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Brze Veze</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-gray-300 hover:text-brand-orange transition-colors text-sm">
-                  Početna
-                </Link>
-              </li>
-              <li>
-                <Link href="/jobs" className="text-gray-300 hover:text-brand-orange transition-colors text-sm">
-                  Pregledaj Poslove
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-gray-300 hover:text-brand-orange transition-colors text-sm">
-                  O Nama
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-300 hover:text-brand-orange transition-colors text-sm">
-                  Kontakt
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* For Employers */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Za Poslodavce</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/employer/register"
-                  className="text-gray-300 hover:text-brand-orange transition-colors text-sm"
-                >
-                  Registracija
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/employer/login"
-                  className="text-gray-300 hover:text-brand-orange transition-colors text-sm"
-                >
-                  Prijava
-                </Link>
-              </li>
-              <li>
-                <Link href="/pricing" className="text-gray-300 hover:text-brand-orange transition-colors text-sm">
-                  Cijene
-                </Link>
-              </li>
-              <li>
-                <Link href="/help" className="text-gray-300 hover:text-brand-orange transition-colors text-sm">
-                  Pomoć
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Kontakt</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                <Mail className="w-4 h-4 text-brand-orange" />
-                <span>info@prviposao.ba</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                <Phone className="w-4 h-4 text-brand-orange" />
-                <span>+387 33 123 456</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-300 text-sm">
-                <MapPin className="w-4 h-4 text-brand-orange" />
-                <span>Sarajevo, Bosna i Hercegovina</span>
-              </div>
-            </div>
-          </div>
+          {/* Quick Links - Removed */}
+          {/* For Employers - Removed */}
         </div>
 
         {/* Bottom Section */}
