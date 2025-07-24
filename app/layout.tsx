@@ -6,7 +6,6 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Navigation } from "@/components/navigation"
 import { PageLoader } from "@/components/page-loader"
 import { AuthProvider } from "@/contexts/auth-context"
-import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -45,11 +44,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="icon" type="image/png" sizes="32x32" href="/logosite.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/logosite.png" />
-        <link rel="shortcut icon" href="/logosite.png" />
-      </Head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <AuthProvider>
